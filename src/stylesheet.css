@@ -204,7 +204,6 @@ select{
     place-items: center;
     aspect-ratio: 1;
     z-index: 1;
-    place-items: center;
     text-decoration: none;
     border-radius: 50%;
 }
@@ -297,4 +296,20 @@ body{
     .home {
         background-image: url(/src/assets/home/background-home-desktop.jpg);
     }
+}
+footer{
+    text-align: center;
+    color: hsl( var(--clr-white) / .5);
+    display: flex;
+    text-wrap:pretty;
+    position:absolute;
+    bottom: -0em;
+
+
+
+}
+footer a{
+    color: hsl( var(--clr-white) / .5);
+    text-decoration: none;
+    text-transform: uppercase;
 }
