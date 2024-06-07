@@ -74,6 +74,7 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
+    overflow-x:hidden;
 
 }
 img,
@@ -209,7 +210,7 @@ select{
 }
 .large-button::after{
     content: '';
-    background-color: (var(--white) / .15);
+    background-color: var(--white) / .15;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -223,33 +224,80 @@ select{
     transform: scale(1.5);
 }
 .primary-navigation{
-    --gap:8rem;
     --underline-gap: 2rem;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    background:  var(--white) / 0.5;
+    backdrop-filter: blur(1.5rem);
 }
-.primary-navigation a{
+.mobile-nav{
+    display: none;
+}
+@media (max-width: 35rem){
+    .primary-navigation{
+    --underline-gap: .5rem;
+    list-style-type: none;
+    padding: min(20rem, 13vh) 2rem;
+    margin: 0;
+    inset: 0 0 0 10%;
+    z-index: 1200;
+    position: fixed;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+}
+.primary-navigation[data-visible="true"]{
+    transform: translateX(0);
+}
+.mobile-nav{
+    display: block;
+    position:absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(/src/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    border: 0;
+    width: 1.5rem;
+    aspect-ratio: 1;
+
+}
+
+.mobile-nav[aria-expanded="true"]{
+    background-image: url(/src/assets/shared/icon-close.svg);
+    }
+}
+
+.primary-navigation a {
     text-decoration: none;
 }
 .primary-navigation a > span{
     font-weight: 700;
     margin-right: .5em;
 }
-.underline-indicators > *{
+.underline-indicators > * {
     cursor: pointer;
     border-bottom: .2rem soild var(--white) / 0;
     border: 0;
     padding: var(--underline-gap, 1rem) 0;
 }
-.underline-indicators > *:hover,
+
 .underline-indicators > * :focus{
-    border-color: (var(--white) / .25);
+    border-color: var(--white) / .25;
 }
+@media (hover:hover) {
+    .underline-indicators > *:hover{
+        border-color: var(--white) / .5;
+    }
+}
+@media (min-width: 35rem){
 .underline-indicators > .active,
 .underline-indicators > [aria-selected="true"] {
     color: var(--white) / 1;
     border-color: var(--white) / 1;
+ }
 }
 .tab-list{
     --gap: 2rem;
@@ -304,9 +352,6 @@ footer{
     text-wrap:pretty;
     position:absolute;
     bottom: -0em;
-
-
-
 }
 footer a{
     color: hsl( var(--clr-white) / .5);
