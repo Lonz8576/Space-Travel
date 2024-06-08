@@ -429,3 +429,18 @@ footer a{
     text-decoration: none;
     text-transform: uppercase;
 }
+
+
+/* destination*/
+
+.wrapper-iframe{
+    height:100%;
+    width:100%;
+    grid-area: wrapper-iframe;
+}
+.space-travel{
+    display:flex;
+    position: relative;
+    justify-content: start;
+    right: -250px;
+}
