@@ -379,7 +379,7 @@ body{
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
 }
-@media (min-width:36rem){
+@media (min-width:){
     .destination {
         background-position: center;
 background-image: url(./assets\destination\background-destination-desktop.jpg);
