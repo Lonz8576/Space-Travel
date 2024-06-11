@@ -285,6 +285,10 @@ select{
 @media (min-width:35em){
         .primary-navigation{
             padding-inline: clamp(3.2rem, 8vw, 7.5rem);
+            margin-bottom: 2.5rem;
+        }
+        .footer{
+            text-wrap:pretty;
         }
 }
 @media (min-width:45em){
@@ -306,6 +310,12 @@ select{
             margin-block:2rem;
 
         }
+        .footer{
+           position: bottom;
+           justify-content:center ;
+           margin-top: 10em;
+
+    }
 }
 
 .underline-indicators > * {
@@ -360,7 +370,8 @@ body{
 }
 @media (min-width:35rem){
     .home {
-        background-position: center center;
+        background-size: cover;
+        background-position:  center;
         background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
@@ -379,7 +390,7 @@ body{
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
 }
-@media (min-width:){
+@media min{
     .destination {
         background-position: center;
 background-image: url(./assets\destination\background-destination-desktop.jpg);
@@ -391,7 +402,8 @@ background-image: url(./assets\destination\background-destination-desktop.jpg);
 footer{
     text-align:center;
     color: hsl( var(--clr-white) / .5);
-    display:block;
+    display:flex;
+    position: relative;
     text-wrap:pretty;
     justify-content:space-evenly;
 
