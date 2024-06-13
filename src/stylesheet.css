@@ -389,6 +389,7 @@ body{
         background-position: center center;
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
+
 }
 @media min{
     .destination {
@@ -477,6 +478,7 @@ footer a{
     flex-direction: row;
     justify-content: space-evenly;
     }
+
 }
 
 @media (min-width: 45em ) {
@@ -512,17 +514,7 @@ footer a{
     justify-content:start;
 
     }
-
 }
 
 
 
-/*.number-indicators{
-    cursor: pointer;
-    border: 0;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    padding: 1rem;
-    background-color: hsl( var(--clr-white) / 1);
-}
-*/

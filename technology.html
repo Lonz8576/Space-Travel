@@ -16,22 +16,47 @@
     <title>Technology</title>
 </head>
 
-<body>
-
-
-    <header class="primary-headeder">
+<body class="technology">
+    <header class="primary-header flex">
         <div>
-
+<img src="./src/assets/shared/logo.svg" alt="Space logo" class="logo">
         </div>
-        <nav>
-<ul class="primary-navigation underline-indicators flex">
-    <li class="active"><a class="uppercase text-white letter-spacing-2" href="index.html"><span>01</span>Active</a>
-    <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
-    <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
- </ul>
+        <button class="mobile-nav"><span class="sr-only"aria-expanded="false"></span></button>
+
+
+    <header class="primary-headeder flex">
+
+     <nav>
+        <ul id="primary-navigation" data-visible="false"  class="primary-navigation underline-indicators flex">
+<li><a class="uppercase text-white letter-spacing-2" href="index.html"><span>01</span>Home</a>
+<li> <a class="uppercase text-white letter-spacing-2" href="destination.html"><span>02</span>Destination</a>
+<li class="active"><a class="uppercase text-white letter-spacing-2" href="technology.html"><span>03</span>Technology</a>
+        </ul>
        </nav>
     </header>
 
+    <main id="main" class="grid-container grid-container--technology flow">
 
+   <h1 class="numbered-title">
+    <span aria-hidden="true">03</span>
+      Space launch 101
+   </h1>
+   
+   <div class="technology-info">
+   <p>The terminology...</p>
+<h2 class="fs-800 uppercase ff-serif">Launch vehicle</h2>
+<p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+</div>
+<div class="image">
+
+     <picture id="moon-img">
+ <img src="./src/assets/technology/image-launch-vehicle-landscape.jpg" alt="the space launch">
+ </picture>
+</div>
+
+
+
+
+</main>
 </body>
 </html>
